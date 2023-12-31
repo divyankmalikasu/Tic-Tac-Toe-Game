@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user input page</title>
+    <link rel="stylesheet" href="input.css">
+    
+</head>
+<body>
+    <label for="username1">Enter your name Player 1:</label>
+    <input type="text" id="username1" name="username1">
+    <label for="username2">Enter your name Player 2:</label>
+    <input type="text" id="username2" name="username2">
+    <button id="submitbutn" onclick="openNewPage()">Submit</button>
+
+</body>
+<script src="input.js"></script>
+<script src = "game.js"></script>
+<script>
+    function openNewPage() {
+            const username1 = document.getElementById("username1").value;
+            const username2 = document.getElementById("username2").value;
+            localStorage.setItem("username1", username1);
+            localStorage.setItem("username2", username2);
+            window.location.href = "game.html"; // Replace with the correct path to your game.html file
+        }
+</script>
+</html>
